@@ -20,7 +20,7 @@ test.describe('E2E testcases for OpenCart Application', () => {
                 await login.logintoApplication(credentials.username, credentials.password);
                 await page.screenshot({ path: '../screenshots/login.png', fullPage: true });
         });
-        test('Select category in home page and verify products', async ({ page }) => {
+        test('Select category in home page and verify products', {tags: "@smoke"}, async ({ page }) => {
 
                 await expect(page.getByText(credentials.username)).toBeVisible();
                 await homePage.selectCategory(Data.category.Phones);

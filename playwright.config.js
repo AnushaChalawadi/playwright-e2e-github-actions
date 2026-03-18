@@ -5,7 +5,7 @@ const config = {
    testDir: './tests',
 
   /* Run tests in parallel */
-  fullyParallel: false,
+  fullyParallel: true,
 
   /* Reports */
   reporter: [['allure-playwright'], ['html']],
@@ -16,6 +16,7 @@ const config = {
     viewport: { width: 1280, height: 720 },
     video: 'on-first-retry',
     screenshot: 'only-on-failure',
+    workers: 2,
   },
   projects: [
     {
